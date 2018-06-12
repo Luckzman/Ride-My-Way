@@ -1,0 +1,34 @@
+/* Remove default spacing around element*/
+* {
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+/* Reuseable classes */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/*header section*/
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0; 
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header li {
+    margin-left: 20px;
+}
+
