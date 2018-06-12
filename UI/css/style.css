@@ -10,12 +10,17 @@ body {
     line-height: 1.5;
 }
 
-/* Reuseable classes */
+/* Reuseable classes and elements */
 .container {
     width: 80%;
     margin: auto;
 }
 
+.form-style {
+    display: flex;
+    justify-content: center;
+    margin: 100px auto;
+}
 /*header section*/
 header .navbar {
     display: flex;
