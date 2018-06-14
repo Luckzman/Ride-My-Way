@@ -67,6 +67,10 @@ a {
     width: 100%;
     overflow: hidden;
 }
+.col-25 {
+    width: 25%;
+    overflow: hidden;
+}
 
 .col-30{
     width: 30%;
@@ -78,6 +82,10 @@ a {
     overflow: hidden;
 }
 
+.col-75 {
+    width: 75%;
+    overflow: hidden;
+}
 .float-right {
     float: right;
 }
@@ -216,4 +224,9 @@ main img {
 .ride-offer-details .profile-info {
     padding: 10px;
     box-sizing: border-box;
+}
+
+.ride-request {
+    margin-top: 150px;
+    padding:10px;
 }
