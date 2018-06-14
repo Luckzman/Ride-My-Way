@@ -90,6 +90,10 @@ a {
     text-align: center;
 }
 
+.text-right{
+    text-align: right;
+}
+
 .form-style {
     width: 60%;
     border: solid 3px #339fdd;
@@ -138,11 +142,7 @@ header {
 }
 
 header .brand {
-    float: left;
-}
-
-header nav{
-    float: right;
+    font-family: cursive;
 }
 
 header li {
