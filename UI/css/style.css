@@ -53,10 +53,41 @@ body {
     line-height: 1.5;
 }
 
+a {
+    text-decoration: none;
+}
 /* Reuseable classes and elements */
 .container {
     width: 80%;
     margin: auto;
+    overflow: hidden;
+}
+
+.row {
+    width: 100%;
+    overflow: hidden;
+}
+
+.col-30{
+    width: 30%;
+    overflow: hidden;
+}
+
+.col-50{
+    width: 50%;
+    overflow: hidden;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .form-style {
@@ -97,13 +128,17 @@ form input[type='submit']:hover {
 }
 /*header section*/
 header {
-    background-color: darkgray;
+    height: 100vh;
+    background-image: url(./../img/ride-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 20px 0 20px 0;
+    line-height: 2;
 }
 
 header .brand {
     float: left;
-
 }
 
 header nav{
@@ -114,6 +149,45 @@ header li {
     display: inline;
     list-style: none;
     margin-left: 20px;
-
 }
 
+header .caption {
+    margin: auto;
+    width: 70%;
+    color: #fff;
+    overflow: hidden;
+}
+
+header .caption h1{
+    font-family: cursive;
+    font-size: 3rem;
+    text-shadow: 2px 2px 2px grey;
+    margin-top: 20%;
+    margin-bottom: 20px;
+}
+
+header .caption p{
+    font-weight: 600;
+    text-shadow: 2px 2px 2px grey;
+}
+
+main .card {
+    background-color: #ebebeb;
+    border: solid 1px #ebebeb;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+main h1 {
+    text-transform: uppercase;
+}
+
+main img {
+    height: 50px;
+    width: 50px;
+    border: solid 2px #ccc;
+    border-radius: 100%;
+    margin: 10px 20px 0 0; 
+}
