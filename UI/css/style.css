@@ -191,3 +191,29 @@ main img {
     border-radius: 100%;
     margin: 10px 20px 0 0; 
 }
+
+.ride-offer-details{
+    height: 25vh;
+    background-image: url(./../img/ride-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.ride-offer-details .profile-img {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    margin-top: 75px;
+    background-color: #fff;
+}
+
+.ride-offer-details .profile {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.ride-offer-details .profile-info {
+    padding: 10px;
+    box-sizing: border-box;
+}
