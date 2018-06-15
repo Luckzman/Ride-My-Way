@@ -67,6 +67,28 @@ a {
     width: 100%;
     overflow: hidden;
 }
+
+.navbar a{
+    background-color: transparent;
+    color: #003c96;
+}
+
+.navbar a:hover{
+    color: #6ea6d3;
+    background-color: transparent;
+}
+
+.navbar .brand {
+    font-family: cursive;
+    font-weight: 600;
+}
+
+.navbar li {
+    display: inline;
+    list-style: none;
+    margin-left: 20px;
+}
+
 .col-25 {
     width: 25%;
     overflow: hidden;
@@ -119,6 +141,7 @@ a {
 .color-green {
     color: #017a01;
 }
+
 .form-style {
     width: 60%;
     background-color: #fff;
@@ -167,33 +190,15 @@ header {
     line-height: 2;
 }
 
-header a{
-    color: #003c96;
-}
-
-header a:hover{
-    color: #6ea6d3;
-}
 header .offer-ride-btn, header .caption a, main a {
     background-color: #0d8d08;
     color: #fff;
     padding: 5px 10px;
-
 }
 
 header .offer-ride-btn:hover, header .caption a:hover, main a:hover {
     color: #6bf566;
     background: #13910f;
-}
-
-header .brand {
-    font-family: cursive;
-}
-
-header li {
-    display: inline;
-    list-style: none;
-    margin-left: 20px;
 }
 
 header .caption {
@@ -237,7 +242,7 @@ main h1 {
     font-family: cursive;
 }
 
-main h3{
+main h3 {
     color: #373738;
     font-size: 18px;
     font-weight: 600;
@@ -288,12 +293,34 @@ main img {
 }
 
 .ride-request {
-    margin-top: 150px;
+    margin-top: 200px;
     padding:15px;
     box-sizing: border-box;
 }
 
-footer{
+.ride-request .name {
+    font-weight: 600;
+}
+.ride-stats {
+    background-color: #373738;
+    color: #ccc;
+}
+
+.ride-stats h3{
+    color: #ebebeb;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.dashboard {
+    height: 20vh;
+    background-image: url(./../img/ride-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+footer {
     padding: 10px;
     background-color: #373738;
     color: #fff;
