@@ -4,7 +4,7 @@
 */
 
 html, body, div, span, applet, object, iframe,
-p, blockquote, pre,
+h3, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -100,8 +100,25 @@ a {
 
 .text-right{
     text-align: right;
+    font-weight: 600;
 }
 
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.mt-10{
+    margin-top: 10px
+}
+
+.color-pink{
+    color: #d64475;
+    font-weight: 600;
+}
+
+.color-green {
+    color: #017a01;
+}
 .form-style {
     width: 60%;
     border: solid 3px #339fdd;
@@ -149,6 +166,25 @@ header {
     line-height: 2;
 }
 
+header a{
+    color: #003c96;
+}
+
+header a:hover{
+    color: #6ea6d3;
+}
+header .offer-ride-btn, header .caption a, main a {
+    background-color: #0d8d08;
+    color: #fff;
+    padding: 5px 10px;
+
+}
+
+header .offer-ride-btn:hover, header .caption a:hover, main a:hover {
+    color: #6bf566;
+    background: #13910f;
+}
+
 header .brand {
     font-family: cursive;
 }
@@ -177,27 +213,48 @@ header .caption h1{
 header .caption p{
     font-weight: 600;
     text-shadow: 2px 2px 2px grey;
+    margin-bottom: 40px;
+}
+
+main{
+    background-color: #007bff;
+    padding: 30px 0;
 }
 
 main .card {
-    background-color: #ebebeb;
+    background-color: #fff;
     border: solid 1px #ebebeb;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px black;
     margin: 10px;
     padding: 10px;
     box-sizing: border-box;
 }
 main h1 {
     text-transform: uppercase;
+    color: #ebebeb;
+    font-family: cursive;
 }
 
+main h3{
+    color: #1a8804;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+main p, main span{
+    margin-bottom: 10px;
+    color: #6d6f72;
+}
+
+main a {
+    border-radius: 10px;
+}
 main img {
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
     border: solid 2px #ccc;
     border-radius: 100%;
-    margin: 10px 20px 0 0; 
+    margin: 10px; 
 }
 
 .ride-offer-details{
