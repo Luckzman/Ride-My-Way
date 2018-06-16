@@ -4,7 +4,7 @@
 */
 
 html, body, div, span, applet, object, iframe,
-h3, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -80,6 +80,7 @@ a {
 
 .navbar .brand {
     font-family: cursive;
+    font-size: 24px;
     font-weight: 600;
 }
 
@@ -87,11 +88,6 @@ a {
     display: inline;
     list-style: none;
     margin-left: 20px;
-}
-
-.col-25 {
-    width: 25%;
-    overflow: hidden;
 }
 
 .col-30{
@@ -104,8 +100,8 @@ a {
     overflow: hidden;
 }
 
-.col-75 {
-    width: 75%;
+.col-65 {
+    width: 65%;
     overflow: hidden;
 }
 .float-right {
@@ -125,6 +121,9 @@ a {
     font-weight: 600;
 }
 
+.pb-10{
+    padding-bottom: 10px;
+}
 .mb-10{
     margin-bottom: 10px;
 }
@@ -140,6 +139,9 @@ a {
 
 .color-green {
     color: #017a01;
+}
+.form-bg {
+    height: 100vh;
 }
 
 .form-style {
@@ -223,9 +225,9 @@ header .caption p{
 }
 
 main{
-    background-color: #007bff;
+    background-color: #5A7A9B;
     padding: 30px 0;
-    height: 100vh;
+    height: 100%;
 }
 
 main .card {
@@ -240,6 +242,14 @@ main h1 {
     text-transform: uppercase;
     color: #ebebeb;
     font-family: cursive;
+    font-size:32px;
+    font-weight: 800;
+}
+
+main h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #444;
 }
 
 main h3 {
@@ -248,7 +258,7 @@ main h3 {
     font-weight: 600;
 }
 
-main p, main span{
+main p, main span, main li{
     margin-bottom: 10px;
     color: #6d6f72;
 }
@@ -264,36 +274,8 @@ main img {
     margin: 10px; 
 }
 
-.ride-offer-details{
-    height: 100vh;
-    background-image: url(./../img/ride-img.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    box-sizing: content-box;
-    overflow: hidden;
-}
-
-.ride-offer-details .profile-img {
-    height: 150px;
-    width: 150px;
-    border-radius: 100%;
-    margin-top: 75px;
-    background-color: #fff;
-}
-
-.ride-offer-details .profile {
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.ride-offer-details .profile-info {
-    padding: 10px;
-    box-sizing: border-box;
-}
-
 .ride-request {
-    margin-top: 200px;
+    margin-top: 50px;
     padding:15px;
     box-sizing: border-box;
 }
@@ -306,22 +288,146 @@ main img {
     color: #ccc;
 }
 
-.ride-stats h3{
+.ride-stats h3, .ride-stats h2 {
     color: #ebebeb;
     font-size: 18px;
     font-weight: 600;
 }
 
 .dashboard {
-    height: 20vh;
+    height: 3vh;
     background-image: url(./../img/ride-img.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
+.modal-dialog {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.15);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    background: rgba(0,0,0,0.8);
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.modal-dialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-dialog>div {
+    width: 350px;
+    position: relative;
+    margin: 10% auto;
+    padding: 0rem;
+    background: #fff;
+    color: #444;
+}
+
+.modal-dialog h3 {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.modal-dialog .btn {
+    background-color: #0d8d08;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.modal-dialog .btn:hover {
+    color: #6bf566;
+    background: #13910f;
+}
+
+.modal-dialog img {
+    width: 100%;
+    height: 200px;
+}
+
+.close {
+    background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+    color: #444;
+}
+
 footer {
     padding: 10px;
     background-color: #373738;
     color: #fff;
+}
+
+@media(max-width: 768px){
+    main .card {
+        float: none;
+        margin: auto;
+        width: 60%;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 423px){
+    .navbar .float-left,
+    .navbar .float-right,
+    .dashboard .float-left,
+    .dashboard .float-right
+    {
+        float: none;
+        width:100%;
+        text-align: center;
+    }
+
+    .navbar li {
+        margin-left: 10px;
+    }
+
+    .dashboard{
+        height: 6vh;
+    }
+
+    header .offer-ride-btn {
+        background-color: transparent;
+        color: #003c96;
+    }
+
+    header .caption h1 {
+        font-size: 1.8rem;
+        text-shadow: 2px 2px 2px grey;
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+    .dashboard .ride-request {
+        margin-top: 20px;
+    }
+
+    .dashboard .float-right .ride-request {
+        margin-bottom: 20px;
+    }
+    
 }

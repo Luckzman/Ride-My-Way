@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
 </head>
 <body>
-    <main class="ride-offer-details">
+    <main class="form-bg">
         <div class="container">
             <div class="row">
                 <div class="form-style">
@@ -21,13 +21,17 @@
                             <input type="text" placeholder="Destination" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Departure Time" required>
+                            <span><label for="time">Departure Time</label></span>
+                            <input type="datetime-local" id="time" value="2018-06-01T08:30" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Departure Time" >  
+                            <input type="text" placeholder="Car Name" >  
                         </div>
                         <div class="form-group">
-                            <input type="test" placeholder="Cost" >
+                            <input type="text"  placeholder="Available Seats">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Cost" >
                         </div>
                         <div class="form-group">
                             <input type="submit" value="submit">
