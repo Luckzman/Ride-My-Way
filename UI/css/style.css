@@ -150,7 +150,8 @@ a {
     margin: auto;
     margin-top: 50px;
     margin-bottom: 30px;
-    padding: 20px
+    padding: 20px;
+    box-shadow: 3px 3px 10px 1px #222;
 }
 
 .form-style .form-group {
@@ -422,6 +423,7 @@ footer {
         margin-top: 40px;
         margin-bottom: 15px;
     }
+
     .dashboard .ride-request {
         margin-top: 20px;
     }
@@ -429,5 +431,10 @@ footer {
     .dashboard .float-right .ride-request {
         margin-bottom: 20px;
     }
+
+    .form-style {
+        width: 80%;
+    }
+
     
 }
