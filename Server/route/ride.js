@@ -1,10 +1,9 @@
 import express from 'express';
+import rideController from './../controller/ride';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.json('get /ride response successful');
-});
+router.get('/', rideController.getRides);
 
 router.get('/:id', (req, res) => {
   res.json(`get /ride/${req.params.id} successful`);
