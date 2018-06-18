@@ -1,0 +1,35 @@
+{
+  "name": "ride-my-way",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel-node": "babel-node --presets=env",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "nodemon --exec npm run babel-node -- index.js",
+    "start": "babel-node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luckzman/Ride-My-Way.git"
+  },
+  "keywords": [],
+  "author": "Lucky Oniovosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luckzman/Ride-My-Way/issues"
+  },
+  "homepage": "https://github.com/Luckzman/Ride-My-Way#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
+    "nodemon": "^1.17.5"
+  }
+}
