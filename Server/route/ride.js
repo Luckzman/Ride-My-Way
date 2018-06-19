@@ -1,6 +1,5 @@
 import express from 'express';
 import rideController from './../controller/ride';
-import ride from './../controller/ride';
 
 const router = express.Router();
 

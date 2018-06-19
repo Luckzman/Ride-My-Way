@@ -1,5 +1,4 @@
 import app from './Server';
-// const app = require('./Server/index');
 
 const port = process.env.PORT || 3000;
 

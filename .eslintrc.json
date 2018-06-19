@@ -1,9 +1,6 @@
 {
     "extends": "airbnb",
     "rules": {
-        "import/no-named-as-default-member": "off",
-        "import/no-named-as-default": "off",
-        "linebreak-style": "off",
-        "no-console": "off"
+        "linebreak-style":"off"
     }
 }
