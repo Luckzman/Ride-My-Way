@@ -7,9 +7,7 @@ router.get('/', rideController.getAllRides);
 
 router.get('/:id', rideController.getSingleRide);
 
-router.post('/', (req, res) => {
-  res.json('post /ride successful');
-});
+router.post('/', rideController.createRide);
 
 router.post('/:id/request', (req, res) => {
   res.json(`post /ride/${req.params.id}/request successful`);

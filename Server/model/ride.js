@@ -4,30 +4,30 @@ const rides = [
         name: 'Abiodun J.',
         source: 'Mowe',
         destination: 'Oshodi',
-        Departure_time: '8:30',
-        Car: 'Toyota Camry',
-        Available_seats: 3,
-        Cost: 800
+        departure_time: '8:30',
+        car: 'Toyota Camry',
+        available_seats: 3,
+        cost: 800
     },
     {
         id: 2,
         name: 'jeremiah E.',
         source: 'Ikorodu',
         destination: 'Lekki',
-        Departure_time: '10:30',
-        Car: 'Kia Rio',
+        departure_time: '10:30',
+        car: 'Kia Rio',
         Available_seats: 4,
-        Cost: 1200,
+        cost: 1200,
     },
     {
         id: 3,
         name: 'Kayode O.',
         source: 'ketu',
         destination: 'Epe',
-        Departure_time: '7:00',
-        Car: 'Honda civic',
-        Available_seats: 2,
-        Cost: 1000,
+        departure_time: '7:00',
+        car: 'Honda civic',
+        available_seats: 2,
+        cost: 1000,
     }
 ]
 
