@@ -1,5 +1,6 @@
 import express from 'express';
 import rideController from './../controller/ride';
+import ride from './../controller/ride';
 
 const router = express.Router();
 
@@ -9,8 +10,6 @@ router.get('/:id', rideController.getSingleRide);
 
 router.post('/', rideController.createRide);
 
-router.post('/:id/request', (req, res) => {
-  res.json(`post /ride/${req.params.id}/request successful`);
-});
+router.post('/:id/request', rideController.createRideRequest);
 
 export default router;

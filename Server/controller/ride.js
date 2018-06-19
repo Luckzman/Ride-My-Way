@@ -32,6 +32,26 @@ const ride = {
             message: 'Ride offer successfully added',
             NewRide: newRide,
         });
+    },
+    createRideRequest(req, res) {
+        const newRideRequest = {
+            id: req.body.id,
+            name: req.body.name,
+            phone: req.body.phone,
+            comment: req.body.comment
+        }
+        for(var i=0;i<rideOffers.length;i++){
+            if(parseInt(req.params.id,10) === rideOffers[i].id) {
+                rideOffers[i].ride_request.push(newRideRequest);
+                return res.status(201).json({
+                    message: 'ride request successful',
+                    ride_request: newRideRequest
+                });
+            }
+        }
+        return res.status(404).json({
+            message: 'Ride offer not available'
+        })
     }
 
 };
