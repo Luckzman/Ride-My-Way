@@ -18,6 +18,16 @@ const rides = [
         Car: 'Kia Rio',
         Available_seats: 4,
         Cost: 1200,
+    },
+    {
+        id: 3,
+        name: 'Kayode O.',
+        source: 'ketu',
+        destination: 'Epe',
+        Departure_time: '7:00',
+        Car: 'Honda civic',
+        Available_seats: 2,
+        Cost: 1000,
     }
 ]
 
