@@ -15,6 +15,16 @@ const rideOffer = {
   cost: 800,
 };
 
+const rideOffer1 = {
+  name: '',
+  source: 'Mowe',
+  destination: 'Oshodi',
+  departure_time: '8:30',
+  car: 'Toyota Camry',
+  available_seats: 3,
+  cost: 800,
+};
+
 const rideRequest = {
   id: 1,
   name: 'Tony D',
@@ -62,9 +72,18 @@ describe('POST /rides', () => {
         done();
       });
   });
+  it('it should not create ride offer', (done) => {
+    chai.request(app)
+      .post('/api/v1/rides')
+      .send(rideOffer1)
+      .end((err, res) => {
+        res.should.have.status(400);
+        done();
+      });
+  });
 });
 
-describe('POST /rides', () => {
+describe('POST /rides/:id/request', () => {
   it('it should be able to create ride request', (done) => {
     chai.request(app)
       .post('/api/v1/rides/1/request')
