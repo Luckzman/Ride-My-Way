@@ -6,27 +6,27 @@
 Ride-my App is a carpooling application that provides drivers with the ability to create ride offers
 and passengers to join available ride offers.
 
-# Table of Content 
-* Built With
-* Application Feature
-* How to use
-* Author
-* License
+## Table of Content 
+1. [Built With](#built-with)
+2. [Application Features](#application-features)
+3. [How to use](#how-to-use)
+4. [Author](#author)
+5. [License](#license)
 
-# Built With
+## Built With
 * HTML5 & CSS3
-* NodeJS
-* Express
-* body-parser
-* Express-validator
+* [NodeJS](https://nodejs.org/en/)
+* [Express](https://expressjs.com/)
+* [body-parser](https://www.npmjs.com/package/body-parser)
+* [Express-validator](https://www.npmjs.com/package/express-validator)
 
+### Deployment
 Ride-My-Way UI is hosted on gh-pages while the app is hosted on Heroku
+* [Github Page](https://luckzman.github.io/Ride-My-Way/UI/index.html)
+* [Pivotal Tracker](https://www.pivotaltracker.com/n/projects/2177986)
+* [Heroku app](https://ridemywayapp.herokuapp.com)
 
-* Github Page
-* Pivotal Tracker
-* Heroku app
-
-# Application Features
+## Application Features
 * Authenticated users can signin
 * users can signup
 * Authenticated users can create ride offers
@@ -37,7 +37,7 @@ Ride-My-Way UI is hosted on gh-pages while the app is hosted on Heroku
 * Authenticated users can view number of ride given/taken
 * Authenticated users can view list of rides given/taken
 
-## API Endpoint
+### API Endpoint
 Endpoint | Functionality
 -------- | -------------
 GET  /rides | Fetch all ride offers
@@ -45,12 +45,11 @@ GET /rides/:id | Fetch a single ride offer
 POST /rides | Create a ride offer
 POST /rides/:id/request | Make a request to join a ride
 
+## How to use
+### Prerequisite
+To clone and run this application, you'll need [git](https://git-scm.com/downloads) and [Node.js](https://nodejs.org/en/download/)(which comes with [npm](https://www.npmjs.com/)) installed on you computer.
 
-# How to use
-## Prerequisite
-To clone and run this application, you'll need git and Node.js(which comes with npm) installed on you computer.
-
-## Installing
+### Installing
 From your command line
 ```
 # Clone this repository
@@ -66,12 +65,12 @@ $ npm install
 $ npm start
 ```
 
-## Running Test
+### Running Test
 * Navigate to the project root directory
 * After installation, run `npm test`
 
-# Author
+## Author
 Lucky Omokarho Oniovosa
 
-# License
+## License
 ISC
