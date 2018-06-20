@@ -15,7 +15,7 @@ const rideOffer = {
   cost: 800,
 };
 
-const rideOffer1 = {
+const invalidRideOffer = {
   name: '',
   source: 'Mowe',
   destination: 'Oshodi',
@@ -75,7 +75,7 @@ describe('POST /rides', () => {
   it('it should not create ride offer', (done) => {
     chai.request(app)
       .post('/api/v1/rides')
-      .send(rideOffer1)
+      .send(invalidRideOffer)
       .end((err, res) => {
         res.should.have.status(400);
         done();
