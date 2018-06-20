@@ -40,23 +40,6 @@ const rides = [
       },
     ],
   },
-  {
-    id: 3,
-    name: 'Kayode O.',
-    source: 'ketu',
-    destination: 'Epe',
-    departure_time: '7:00',
-    car: 'Honda civic',
-    available_seats: 2,
-    cost: 1000,
-    ride_request: [
-      {
-        id: 4,
-        name: 'Tony D',
-        phone: '07034333484',
-      },
-    ],
-  },
 ];
 
 export default rides;
