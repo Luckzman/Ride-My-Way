@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "babel-node": "babel-node --presets=env",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --require babel-register ./Server/test/**/*.js --exit",
     "start-dev": "nodemon --exec npm run babel-node -- index.js",
     "start": "babel-node index"
   },
@@ -22,7 +22,10 @@
   "homepage": "https://github.com/Luckzman/Ride-My-Way#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.3"
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "express": "^4.16.3",
+    "express-validator": "^5.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -32,6 +35,7 @@
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.9.1",
+    "mocha": "^5.2.0",
     "nodemon": "^1.17.5"
   }
 }
