@@ -3,7 +3,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/Luckzman/Ride-My-Way/badge.svg)](https://coveralls.io/github/Luckzman/Ride-My-Way)
 [![Maintainability](https://api.codeclimate.com/v1/badges/11ca2d3bbdce9641bc2c/maintainability)](https://codeclimate.com/github/Luckzman/Ride-My-Way/maintainability)
 
-Ride-my App is a carpooling application that provides drivers with the ability to create ride offers
+Ride-My-Way App is a carpooling application that provides drivers with the ability to create ride offers
 and passengers to join available ride offers.
 
 ## Table of Content 
@@ -14,7 +14,7 @@ and passengers to join available ride offers.
 5. [License](#license)
 
 ## Built With
-* HTML5 & CSS3
+* [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) & [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3)
 * [NodeJS](https://nodejs.org/en/)
 * [Express](https://expressjs.com/)
 * [body-parser](https://www.npmjs.com/package/body-parser)
