@@ -84,6 +84,10 @@ a {
     font-weight: 600;
 }
 
+.navbar nav {
+    padding: 8px 0;
+}
+
 .navbar li {
     display: inline;
     list-style: none;
@@ -206,9 +210,14 @@ header .offer-ride-btn:hover, header .caption a:hover, main a:hover {
 
 header .caption {
     margin: auto;
-    width: 70%;
+    width: 100%;
     color: #fff;
     overflow: hidden;
+}
+
+header .caption .mx-auto{
+    width: 60%;
+    margin: auto;
 }
 
 header .caption h1{
