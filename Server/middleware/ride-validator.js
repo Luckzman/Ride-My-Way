@@ -8,7 +8,6 @@ const Ride = {
     req.check('cost', 'cost is required').notEmpty().isInt({ gt: 1 });
 
     const errors = req.validationErrors();
-    console.log(errors);
     if (errors) {
       return res.status(400).json({
         message: errors[0].msg,
