@@ -84,6 +84,10 @@ a {
     font-weight: 600;
 }
 
+.navbar nav{
+    padding: 8px 0;
+}
+
 .navbar li {
     display: inline;
     list-style: none;
@@ -119,6 +123,9 @@ a {
 .text-right{
     text-align: right;
     font-weight: 600;
+}
+.p-10{
+    margin: 10px;
 }
 
 .pb-10{
@@ -206,9 +213,14 @@ header .offer-ride-btn:hover, header .caption a:hover, main a:hover {
 
 header .caption {
     margin: auto;
-    width: 70%;
+    width: 90%;
     color: #fff;
     overflow: hidden;
+}
+
+header .caption .mx-auto {
+    width: 60%;
+    margin: auto;
 }
 
 header .caption h1{
@@ -325,7 +337,7 @@ main img {
 }
 
 .modal-dialog>div {
-    width: 350px;
+    width: 320px;
     position: relative;
     margin: 10% auto;
     padding: 0rem;
@@ -386,11 +398,31 @@ footer {
 
 @media(max-width: 768px){
     main .card {
-        float: none;
-        margin: auto;
-        width: 60%;
+        float: left;
+        margin: 10px;
+        width: 40%;
         margin-bottom: 20px;
     }
+    header .caption .mx-auto{
+        width: 100%;
+       /* margin: auto;*/
+    }
+
+}
+
+@media(max-width: 610px){
+    .navbar .float-left,
+    .navbar .float-right,
+    .dashboard .float-left,
+    .dashboard .float-right
+    {
+        float: none;
+        width:100%;
+        text-align: center;
+    }
+    .dashboard{
+        height: 6vh;
+    }  
 }
 
 @media(max-width: 423px){
@@ -408,6 +440,13 @@ footer {
         margin-left: 10px;
     }
 
+    main .card {
+        float: none;
+        margin: auto;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
     .dashboard{
         height: 6vh;
     }
@@ -417,11 +456,19 @@ footer {
         color: #003c96;
     }
 
+    header .caption, header .caption .mx-auto{
+        width:100%;
+        margin: auto;
+    }
     header .caption h1 {
         font-size: 1.8rem;
         text-shadow: 2px 2px 2px grey;
         margin-top: 40px;
         margin-bottom: 15px;
+    }
+
+    header .caption p {
+        font-weight: normal;
     }
 
     .dashboard .ride-request {
