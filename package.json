@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "create-db": "psql -U postgres -f ./Server/model/db.sql",
     "babel-node": "babel-node --presets=env",
     "test": "nyc mocha --require babel-register ./Server/test/**/*.js --exit",
     "start-dev": "nodemon --exec npm run babel-node -- index.js",
@@ -27,7 +28,8 @@
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
     "express": "^4.16.3",
-    "express-validator": "^5.2.0"
+    "express-validator": "^5.2.0",
+    "pg": "^7.4.3"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
