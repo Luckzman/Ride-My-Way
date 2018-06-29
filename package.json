@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "create-db": "psql -U postgres -f ./Server/model/rides.sql",
+    "create-db": "psql -U postgres -f ./Server/model/database.sql",
     "babel-node": "babel-node --presets=env",
     "test": "nyc mocha --require babel-register ./Server/test/**/*.js --exit",
     "start-dev": "nodemon --exec npm run babel-node -- index.js",
