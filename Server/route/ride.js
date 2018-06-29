@@ -1,6 +1,7 @@
 import express from 'express';
 import rideController from './../controller/ride';
 import rideController2 from './../controller/rides';
+import rideController3 from './../controller/request';
 // import rideValidator from './../middleware/ride-validator';
 import userController from './../controller/user';
 
@@ -21,7 +22,7 @@ router.get('/rides/:id', rideController.getSingleRide);
 
 router.post('/users/rides', rideController.createRide);
 
-router.post('/rides/:id/request', rideController.createRideRequest);
+router.post('/rides/:id/request', rideController3.createRequest);
 
 
 export default router;

@@ -17,8 +17,15 @@ CREATE TABLE rides(
   --user_id INT REFERENCES users(id),
   source VARCHAR(50) NOT NULL,
   destination VARCHAR(50) NOT NULL,
-  departure_time TIME,
+  departure_time TIME NOT NULL,
   car_name VARCHAR(50),
   available_seat SMALLINT NOT NULL,
   cost INT NOT NULL
+);
+
+CREATE TABLE request(
+  id SERIAL PRIMARY KEY,
+  request_ride BOOLEAN NOT NULL,
+  message TEXT,
+  ride_id INT REFERENCES rides(id)
 );

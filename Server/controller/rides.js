@@ -6,7 +6,7 @@ const Rides = {
         db.query('SELECT * FROM rides', (err, ride) =>{
             if(err) return next(err);
             return res.status(200).json({
-                status: 'success',
+                status: 'true',
                 data: {
                     ride: ride.rows
                 }
@@ -16,12 +16,6 @@ const Rides = {
     getSingleRide(req,res,next) {
         const value = [parseInt(req.params.id,10)];
         db.query('SELECT * FROM rides WHERE id=$1', [req.params.id], (err, ride) => {
-            /* if(!ride) {
-                return res.status(404).json({
-                    status: false,
-                    message: 'ride does not exist'
-                });
-            } */
             if(ride) {
                 let rideDetails = [];
                 ride.rows.map(newRide => {
