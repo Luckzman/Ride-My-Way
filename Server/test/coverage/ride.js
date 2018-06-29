@@ -5,26 +5,6 @@ import app from './../../index';
 chai.should();
 chai.use(chaiHttp);
 
-const rideOffer = {
-  name: 'Abiodun J.',
-  source: 'Mowe',
-  destination: 'Oshodi',
-  departure_time: '8:30',
-  car: 'Toyota Camry',
-  available_seats: 3,
-  cost: 800,
-};
-
-const invalidRideOffer = {
-  name: '',
-  source: 'Mowe',
-  destination: 'Oshodi',
-  departure_time: '8:30',
-  car: 'Toyota Camry',
-  available_seats: 3,
-  cost: 800,
-};
-
 const rideRequest = {
   id: 1,
   name: 'Tony D',
@@ -62,26 +42,6 @@ describe('GET /rides/:id', () => {
   });
 });
 
-describe('POST /rides', () => {
-  it('it should be able to create ride offer', (done) => {
-    chai.request(app)
-      .post('/api/v1/users/rides')
-      .send(rideOffer)
-      .end((err, res) => {
-        res.should.have.status(201);
-        done();
-      });
-  });
-  it('it should not create ride offer', (done) => {
-    chai.request(app)
-      .post('/api/v1/rides')
-      .send(invalidRideOffer)
-      .end((err, res) => {
-        res.should.have.status(400);
-        done();
-      });
-  });
-});
 
 describe('POST /rides/:id/request', () => {
   it('it should be able to create ride request', (done) => {
@@ -98,7 +58,7 @@ describe('POST /rides/:id/request', () => {
       .post('/api/v1/rides/0/request')
       .send(rideRequest)
       .end((err, res) => {
-        res.should.have.status(404);
+        res.should.have.status(400);
         done();
       });
   });
