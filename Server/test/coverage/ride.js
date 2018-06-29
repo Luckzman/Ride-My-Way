@@ -65,7 +65,7 @@ describe('GET /rides/:id', () => {
 describe('POST /rides', () => {
   it('it should be able to create ride offer', (done) => {
     chai.request(app)
-      .post('/api/v1/rides')
+      .post('/api/v1/users/rides')
       .send(rideOffer)
       .end((err, res) => {
         res.should.have.status(201);
