@@ -1,10 +1,11 @@
 import express from 'express';
 import rideController from './../controller/ride';
+import rideController2 from './../controller/rides';
 import rideValidator from './../middleware/ride-validator';
 
 const router = express.Router();
 
-router.get('/', rideController.getAllRides);
+router.get('/', rideController2.getAllRides);
 
 router.get('/:id', rideController.getSingleRide);
 
