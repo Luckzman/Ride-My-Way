@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.get('/', rideController2.getAllRides);
 
-router.get('/:id', rideController.getSingleRide);
+router.get('/:id', rideController2.getSingleRide);
 
 router.post('/', rideValidator.ride, rideController.createRide);
 
