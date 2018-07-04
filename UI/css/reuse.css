@@ -18,30 +18,34 @@ a {
     overflow: hidden;
 }
 
-/* .navbar a{
-    background-color: transparent;
-    color: #003c96;
-} */
-
-/* .navbar a:hover{
-    color: #6ea6d3;
-    background-color: transparent;
-} */
-
+.overflow {
+    overflow: hidden;
+}
+.navbar{
+    padding: 10px;
+    background-color: #222;
+}
 .navbar .brand {
     font-family: cursive;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
 }
-/* 
-.navbar nav {
-    padding: 8px 0;
-} */
 
-.navbar li {
+.navbar li{  
     display: inline;
     list-style: none;
-    margin-left: 20px;
+    margin-left: 10px; 
+    padding: 5px;
+}
+
+.navbar a{
+    color: #ddd;
+}
+
+.navbar li:hover{
+    color: #ccc;
+    background-color: transparent;
+    border-bottom: 2px solid #0067bb;
 }
 
 .col-30{
@@ -96,46 +100,4 @@ a {
 
 .color-green {
     color: #017a01;
-}
-.form-bg {
-    height: 100vh;
-}
-
-.form-style {
-    width: 60%;
-    background-color: #fff;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    padding: 20px;
-    box-shadow: 3px 3px 10px 1px #222;
-}
-
-.form-style .form-group {
-    margin-bottom: 30px; 
-    text-align: center
-}
-
-.form-style h2 {
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 30px;
-}
-form input {
-    width: 90%;
-    padding: 7px;
-    border: solid 2px #82b0d6;
-    border-radius: 5px;
-    margin: auto;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-}
-
-form input[type='submit'] {
-    font-size: 18px;
-}
-
-form input[type='submit']:hover {
-    color: gray;
-    background-color: lightgrey;
 }
