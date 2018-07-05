@@ -23,7 +23,7 @@ a {
 }
 .navbar{
     padding: 10px;
-    background-color: #222;
+    background-color: #111;
 }
 .navbar .brand {
     font-family: cursive;
@@ -45,7 +45,7 @@ a {
 .navbar li:hover{
     color: #ccc;
     background-color: transparent;
-    border-bottom: 2px solid #0067bb;
+    border-bottom: 2px solid #017a01;
 }
 
 .col-30{

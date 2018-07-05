@@ -10,15 +10,14 @@ main{
     background-color: rgba(5,5, 5, .6);
 }
 
-
 main .brand a{
     color: #ddd;
 }
 
-
 .overflow {
     overflow: hidden;
 }
+
 main .caption {
     margin: auto;
     width: 90%;
@@ -40,4 +39,19 @@ main .caption h1{
 
 main .caption p{
     margin-bottom: 40px;
+}
+
+main .caption input{
+    border: solid 1px #000;
+    background-color: rgba(255,255,255,0.1);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+main .caption button{
+    background: #017a01;
+    color: #ccc;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
 }

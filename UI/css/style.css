@@ -48,7 +48,9 @@ header .caption p{
     margin-bottom: 40px;
 }
 
-main{
+
+
+/* main{
     background-color: #5A7A9B;
     padding: 30px 0;
     height: 100%;
@@ -206,7 +208,7 @@ footer {
     background-color: #373738;
     color: #fff;
 }
-
+ */
 @media(max-width: 768px){
     main .card {
         float: left;
