@@ -1,0 +1,274 @@
+
+.navbar li{
+    padding:0;
+    margin-left: 0;
+}
+/* Style The Dropdown Button */
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 5%;
+    background-color: #f9f9f9;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #ccc;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color:  #333}
+
+/* Show the dropdown menu on hover */
+.dropbtn:hover .dropdown-content {
+    display: block;
+    background-color: #222;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {
+} */
+
+
+.tab {
+    width:90%;
+    padding: 20px;
+    background: #fff;
+    position: relative;
+  }
+  
+  
+.content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+  }
+  
+  input {
+    display: none;
+  }
+  
+  label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    border: 1px solid transparent;
+  }
+/*   
+  label:before {
+    font-family: fontawesome;
+    font-weight: normal;
+    margin-right: 10px;
+  }
+
+  
+  label[for*='1']:before { content: '\f1cb'; }
+  label[for*='2']:before { content: '\f17d'; }
+  label[for*='3']:before { content: '\f16b'; }
+  label[for*='4']:before { content: '\f1a9'; }
+   */
+  label:hover {
+    color: #888;
+    cursor: pointer;
+  }
+  
+  input:checked + label {
+    color: #555;
+    border: 1px solid #ddd;
+    border-top: 2px solid limegreen;
+    border-bottom: 1px solid #fff;
+  }
+  
+  #tab1:checked ~ #content1,
+  #tab2:checked ~ #content2 {
+    display: block;
+  }
+  
+  /* @media screen and (max-width: 650px) {
+    label {
+      font-size: 0;
+    }
+    label:before {
+      margin: 0;
+      font-size: 18px;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    label {
+      padding: 15px;
+    }
+  } */
+
+  .ride-offer-tab{
+      display:inline;
+  }
+  .ride-offer-tab li{
+      display: inherit;
+      padding: 5px;
+  }
+  #content1 .name{
+    width: 65px;
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+#content1 .request-panel{
+    background: #ececec;
+    color: #555;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+  #content1 p{
+      display: inline;
+      font-size: 12px;
+  }
+
+  #content1 button{
+      background-color: #2bac2b;
+      color: #fff;
+      padding: 5px;
+      border: none;
+      margin: 10px;
+      border-radius: 5px;
+      box-shadow: 1px 1px #acacac;
+  }
+  
+  #content2 img {
+      height: 50px;
+      width: 50px;
+      border-radius: 100%;
+  }
+
+  #content2 table{
+      width: 100%;
+      margin: auto 0;
+  }
+#content2 th{
+    font-weight: 600;
+    background-color: limegreen;
+    color: #fff;
+}
+
+#content2 th, td{
+    font-size: 12px;
+    text-align: left;
+    padding: 5px;
+
+}
+
+#content2 tr:nth-child(even){
+    background-color: #f9f9f9;
+}
+#content2 tr:hover{
+    background-color: #eee;
+}
+
+.ride-request{
+    font-size: 12px;
+    margin-top: 20px;
+    padding:20px;
+    background-color:#333;
+    color: #eee;
+}
+
+
+.modal-dialog {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.15);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    background: rgba(0,0,0,0.8);
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.modal-dialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-dialog>div {
+    width: 320px;
+    position: relative;
+    margin: 10% auto;
+    padding: 0rem;
+    background: #fff;
+    color: #444;
+}
+
+.modal-dialog h3 {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.modal-dialog .btn {
+    background-color: #0d8d08;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.modal-dialog .btn:hover {
+    color: #6bf566;
+    background: #13910f;
+}
+
+.modal-dialog img {
+    width: 100%;
+    height: 200px;
+}
+
+.close {
+    background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+    color: #444;
+}
+

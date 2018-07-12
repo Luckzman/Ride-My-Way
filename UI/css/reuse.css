@@ -21,6 +21,22 @@ a {
 .overflow {
     overflow: hidden;
 }
+
+.col-30{
+    width: 30%;
+    overflow: hidden;
+}
+
+.col-50{
+    width: 50%;
+    overflow: hidden;
+}
+
+.col-65 {
+    width: 65%;
+    overflow: hidden;
+}
+
 .navbar{
     padding: 10px;
     background-color: #111;
@@ -48,20 +64,6 @@ a {
     border-bottom: 2px solid #017a01;
 }
 
-.col-30{
-    width: 30%;
-    overflow: hidden;
-}
-
-.col-50{
-    width: 50%;
-    overflow: hidden;
-}
-
-.col-65 {
-    width: 65%;
-    overflow: hidden;
-}
 .float-right {
     float: right;
 }
@@ -80,6 +82,9 @@ a {
 }
 .p-10{
     margin: 10px;
+}
+.py-10{
+    margin: 10px 0;
 }
 .pt-10{
     padding-top: 10px;
