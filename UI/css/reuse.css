@@ -1,0 +1,114 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+/* Reuseable classes and elements */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.row {
+    width: 100%;
+    overflow: hidden;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.col-30{
+    width: 30%;
+    overflow: hidden;
+}
+
+.col-50{
+    width: 50%;
+    overflow: hidden;
+}
+
+.col-65 {
+    width: 65%;
+    overflow: hidden;
+}
+
+.navbar{
+    padding: 10px;
+    background-color: #111;
+}
+.navbar .brand {
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.navbar li{  
+    display: inline;
+    list-style: none;
+    margin-left: 10px; 
+    padding: 5px;
+}
+
+.navbar a{
+    color: #ddd;
+}
+
+.navbar li:hover{
+    color: #ccc;
+    background-color: transparent;
+    border-bottom: 2px solid #017a01;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+    font-weight: 600;
+}
+.p-10{
+    margin: 10px;
+}
+.py-10{
+    margin: 10px 0;
+}
+.pt-10{
+    padding-top: 10px;
+}
+
+.pb-10{
+    padding-bottom: 10px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.box-size{
+    box-sizing: border-box;
+}
+
+.mt-10{
+    margin-top: 10px
+}
+
+.color-pink{
+    color: #d64475;
+    font-weight: 600;
+}
+
+.color-green {
+    color: #017a01;
+}
