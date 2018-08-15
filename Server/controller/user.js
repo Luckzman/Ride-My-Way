@@ -1,21 +1,41 @@
+import bcrypt from 'bcrypt';
 import db from './../model/index';
 
 const User = {
     createUser(req, res, next) {
-        const query = 'INSERT INTO users(firstname, lastname, email, password, phone) VALUES($1, $2, $3, $4, $5)  RETURNING *';
-        
-        const values= [req.body.firstname, req.body.lastname, req.body.email, req.body.password, req.body.phone];
+        bcrypt.hash(req.body.password, 10).then((hash) =>{
+            const query = 'INSERT INTO users(firstname, lastname, email, password, phone) VALUES($1, $2, $3, $4, $5)  RETURNING *';
+            const values= [
+                req.body.firstname, 
+                req.body.lastname, 
+                req.body.email, 
+                hash, 
+                req.body.phone
+            ];
+            db.query(query, values).then((user) => {
+                res.status(201).json({
+                    success: true,
+                    data: {
+                        user: user.rows[0]
+                    }
+                });
           
-        db.query(query, values, (err, user) => {
-            if (err) return next(err);
-            res.status(201).json({
-                status: 'success',
-                data: {
-                    user: user.rows[0]
-                }
+            }).catch((error)=>{
+                res.status(400).json({
+                    success: false,
+                    message: 'Bad Request',
+                    error
+                })
             });
-      
-        });
+        }).catch((error)=>{
+            res.status(500).json({
+                success: false,
+                message: 'Server Error',
+                error
+            })
+        })
+
+        
     },
     loginUser(req, res, next) {
         const query = 'SELECT email, password FROM users WHERE email = $1';
