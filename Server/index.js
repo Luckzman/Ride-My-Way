@@ -4,6 +4,8 @@ import expressValidator from 'express-validator';
 import logger from 'morgan';
 import router from './route/index';
 
+require('dotenv').config();
+
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

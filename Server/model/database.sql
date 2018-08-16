@@ -14,13 +14,13 @@ CREATE TABLE users(
 
 CREATE TABLE rides(
   id SERIAL PRIMARY KEY,
-  --user_id INT REFERENCES users(id),
+  user_id INT REFERENCES users(id),
   source VARCHAR NOT NULL,
   destination VARCHAR NOT NULL,
-  departure_time TIME NOT NULL,
+  departure_time TIMESTAMP ,
   car_name VARCHAR,
-  available_seat SMALLINT NOT NULL,
-  cost INT NOT NULL
+  available_seat SMALLINT ,
+  cost INT
 );
 
 CREATE TABLE rideRequest(

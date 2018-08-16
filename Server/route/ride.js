@@ -4,9 +4,10 @@ import rideController2 from './../controller/rides';
 import rideController3 from './../controller/request';
 // import rideValidator from './../middleware/ride-validator';
 import userController from './../controller/user';
+import authChecker from './../middleware/auth-checker';
 
 const router = express.Router();
-router.get('/rides', rideController.getAllRides);
+// router.get('/rides', rideController.getAllRides);
 
 router.get('/rides/:id', rideController.getSingleRide)
 
@@ -22,10 +23,10 @@ router.get('/rides', rideController2.getAllRides);
 
 router.get('/rides/:id', rideController2.getSingleRide);
 
-router.post('/users/rides', rideController2.createRide);
+router.post('/users/rides', authChecker, rideController2.createRide);
 
 
-router.post('/users/rides', rideController.createRide);
+// router.post('/users/rides', rideController.createRide);
 
 
 

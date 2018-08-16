@@ -5,6 +5,7 @@ const Rides = {
         // const query = ;
         db.query('SELECT * FROM rides', (err, ride) =>{
             if(err) return next(err);
+            console.log(req.userData);
             return res.status(200).json({
                 status: 'true',
                 data: {
@@ -45,8 +46,9 @@ const Rides = {
         });
     },
     createRide(req, res, next) {
-        const query = 'INSERT INTO rides(source, destination, departure_time, car_name, available_seat, cost) VALUES($1, $2, $3, $4, $5, $6) RETURNING *';
-        const value = [req.body.source, req.body.destination, req.body.deparure_time, req.body.car_name,req.body.available_seat, req.body.cost];
+        const query = 'INSERT INTO rides(source, destination, departure_time, car_name, available_seat, cost, user_id) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING *';
+        const value = [req.body.source, req.body.destination, req.body.deparure_time, req.body.car_name,req.body.available_seat, req.body.cost, req.userData.id];
+        console.log(req.userData);
         db.query(query, value, (err, ride)=>{
             if(err) return next(err);
             return res.status(201).json({
