@@ -2,7 +2,6 @@ import db from './../model/index';
 
 const Rides = {
     getAllRides(req, res, next) {
-        // const query = ;
         db.query('SELECT * FROM rides', (err, ride) =>{
             if(err) return next(err);
             console.log(req.userData);
@@ -15,34 +14,22 @@ const Rides = {
         });
     },
     getSingleRide(req,res,next) {
-        const value = [parseInt(req.params.id,10)];
-        db.query('SELECT * FROM rides WHERE id=$1', [req.params.id], (err, ride) => {
-            if(ride) {
-                let rideDetails = [];
-                ride.rows.map(newRide => {
-                    if(newRide.id === parseInt(req.params.id,10)) {
-                        rideDetails.push(newRide); 
-                    }
+        const id = parseInt(req.params.id,10);
+        const value = [parseInt(id,10)];
+        db.query('SELECT * FROM rides WHERE id=$1', [id], (err, ride) => {
+            console.log(ride.rows);
+            if(ride.rows.length === 0) {
+                return res.status(404).json({
+                    status: false,
+                    message: 'Ride not available'
                 })
-                if(rideDetails.length === 0){
-                    return res.status(404).json({
-                        status: false,
-                        message: 'Ride not available'
-                    })
+            }   
+            return res.status(200).json({
+                status: true,
+                data: {
+                    ride: ride.rows
                 }
-                return res.status(200).json({
-                    status: true,
-                    data: {
-                        ride: ride.rows
-                    }
-                })
-            }
-            else {
-                (err) => {
-                    return next(err);
-                }
-            }
-            
+            })
         });
     },
     createRide(req, res, next) {
@@ -58,6 +45,45 @@ const Rides = {
                 }
             });
         });
+    },
+    createRideRequest(req, res, next) {
+        const query = 'SELECT * FROM rides WHERE id = $1';
+        //const query = 'SELECT rides.*, riderequest.* FROM rides JOIN riderequest ON (rides.id = riderequest.ride_id)';
+        const value = [req.params.id];
+        db.query(query, value).then((ride)=>{
+           console.log(req.userData)
+            if(ride.rows.length === 0){
+                return res.status(404).json({
+                    success: false,
+                    message: 'rides not found'
+                })
+            }
+            else{
+                console.log(ride.rows)
+                console.log(req.userData);
+                db.query(
+                    'INSERT INTO rideRequest(status, ride_id, user_id) VALUES($1, $2, $3) RETURNING *',
+                    [req.body.status, parseInt(req.params.id,10), req.userData.id]
+                ).then((request) => {
+                    return res.status(201).json({
+                        success: true,
+                        message: 'Ride request created successfully',
+                        data: request.rows
+                    })
+                }).catch((error)=>{
+                    return res.status(400).json({
+                        success: false,
+                        message: 'error inserting in db',
+                        error,
+                    })
+                })
+            }
+        }).catch((error)=>{
+            return res.status(404).json({
+                success: false,
+                error,
+            })
+        })
     }
     
 }
