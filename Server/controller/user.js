@@ -74,7 +74,7 @@ const User = {
                                 id: user.rows[0].id
                                 }, process.env.SECRET_KEY,
                                 {
-                                    expiresIn: '1h'
+                                    expiresIn: '6h'
                                 }
                             )
                             return res.status(200).json({

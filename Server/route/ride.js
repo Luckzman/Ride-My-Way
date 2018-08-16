@@ -7,7 +7,8 @@ import userController from './../controller/user';
 import authChecker from './../middleware/auth-checker';
 
 const router = express.Router();
-// router.get('/rides', rideController.getAllRides);
+/* challenge 2 routes */
+router.get('/rides', rideController.getAllRides);
 
 router.get('/rides/:id', rideController.getSingleRide)
 
@@ -15,6 +16,7 @@ router.post('/rides/:id', rideController.createRide)
 
 router.post('/rides/:id/request', rideController.createRideRequest);
 
+/* challenge 3 routes */
 router.post('/auth/signup', userController.createUser);
 
 router.post('/auth/login', userController.loginUser);
@@ -30,7 +32,7 @@ router.post('/users/rides', authChecker, rideController2.createRide);
 
 
 
-router.post('/rides/:id/request', rideController3.createRequest);
+router.post('/rides/:id/request', authChecker, rideController2.createRideRequest);
 
 
 export default router;

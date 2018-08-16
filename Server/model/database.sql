@@ -25,7 +25,10 @@ CREATE TABLE rides(
 
 CREATE TABLE rideRequest(
   id SERIAL PRIMARY KEY,
-  request_ride BOOLEAN NOT NULL,
-  message TEXT,
-  ride_id INT REFERENCES rides(id)
+  --request_ride BOOLEAN NOT NULL ,
+  --message TEXT,
+  status VARCHAR DEFAULT 'pending',
+  ride_id INT REFERENCES rides(id),
+ -- ride_id INT REFERENCES rides(id),
+  user_id INT REFERENCES users(id)
 );
