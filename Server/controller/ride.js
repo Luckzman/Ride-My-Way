@@ -49,7 +49,7 @@ const ride = {
         });
       }
     }
-    return res.status(404).json({
+    return res.status(400).json({
       message: 'Ride offer not available',
     });
   },

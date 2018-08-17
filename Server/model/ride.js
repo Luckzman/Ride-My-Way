@@ -30,7 +30,7 @@ const rides = [
     destination: 'Lekki',
     departure_time: '10:30',
     car: 'Kia Rio',
-    Available_seats: 4,
+    available_seats: 4,
     cost: 1200,
     ride_request: [
       {

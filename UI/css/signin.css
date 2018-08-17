@@ -1,0 +1,104 @@
+body{
+    background: url("./../img/bg-img2.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.form-bg {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.form-style {
+    width: 50%;
+    background-color: #ccc3;
+    color: rgb(209, 209, 209);
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 3px;
+}
+form{
+    width: 90%;
+    margin:auto;
+}
+
+form .form-group{
+    margin: 10px 0;
+}
+
+.form-style h2{
+    text-align: center;
+    color: rgb(50, 205, 50);
+    margin-bottom: 20px;
+}
+
+form label{
+    display: block;
+    font-size: 12px;
+}
+
+form input{
+    width: 100%;
+    border: none;
+    padding: 5px 0;
+    background: rgba(255,255,255,0.1);
+    border: solid 1px #222;
+    color: #ccc;
+}
+
+form input[type="checkbox"]{
+    width: fit-content;
+}
+
+form .inline{
+    display: inline;
+}
+
+form .btn-submit{
+    width: 100%;
+    background-color: #43ff0087;
+    border: solid 1px #222;
+    padding: 5px;
+    color: #222;
+    box-shadow: 2px 2px 1px #111;
+}
+
+form .btn{
+    width: 45%;
+}
+
+form img{
+    height: 100%;
+    width: 100%;
+}
+/* .form-style .form-group {
+    margin-bottom: 30px;
+}
+
+.form-style h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+form input {
+    width: 90%;
+    padding: 7px;
+    border: solid 2px #82b0d6;
+    border-radius: 5px;
+    margin: auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+form input[type='submit'] {
+    font-size: 18px;
+}
+form input[type='checkbox'] {
+    display: inline;
+}
+
+form input[type='submit']:hover {
+    color: gray;
+    background-color: lightgrey;
+} */

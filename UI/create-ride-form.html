@@ -5,11 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ride-My-Way</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./css/reuse.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./css/signin.css" />
-
 </head>
 <body>
     <main class="form-bg">
@@ -20,39 +18,43 @@
                 </div>
                 <nav class="float-right">
                     <ul>
-                        <li><a class="links" href="./signup-form.html">Signup</a></li>
+                        <li><a class="links" href="./signin-form.html"></a></li>
                     </ul>
                 </nav>
             </div>
         </div>
         <div class="container">
             <div class="form-style">
-                <h2>Sign In Form</h2>
+                <h2>Create Ride Offer</h2>
                 <form>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" name="" id="email">
+                        <label class="pt-10" for="email">Source</label>
+                        <input type="text" name="" id="email">
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" name="" id="password">
+                        <label for="dest">Destination</label>
+                        <input type="text" name="" id="dest">
                     </div>
-                    <input type="checkbox" name="forget-password" id="forget-password">
-                    <label class="inline" for="forget-password">Forget Password</label>
                     <div class="form-group">
-                        <button class="btn-submit">submit</button>
+                        <label for="time">Departure Time</label>
+                        <input type="text" name="" id="time">
                     </div>
-                    <div class="text-center">
-                        <p>Or</p>
+                    <div class="form-group">
+                        <label for="cost">Cost</label>
+                        <input type="text" name="" id="cost">
                     </div>
-                    <div class="overflow mt-10">
-                        <div class="btn float-left">
-                            <a><img src="./img/facebook-login.png" alt="Login with facebook"></a>
-                        </div>
-                        <div class="btn float-right ">
-                            <img src="./img/google-login.png" alt="Login with google">
-                        </div>
+                    <div class="form-group">
+                        <label for="seat">Available Seats</label>
+                        <input type="text" name="" id="seat">
                     </div>
+                    <div class="form-group">
+                        <label for="car">Car type</label>
+                        <input type="text" name="" id="car">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn-submit"><a href="./dashboard.html">submit</a></button>
+                    </div>
+                    
                 </form>
             </div>
         </div>

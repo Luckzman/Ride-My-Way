@@ -5,30 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ride-My-Way</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./css/reuse.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/reuse.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/signin.css" />
+
 </head>
 <body>
-    <main class="form-bg" >
+    <main class="form-bg">
+        <div class="navbar overflow">
+            <div class="container">
+                <div class="brand float-left">
+                    <a href="./index.html">HOME</a>
+                </div>
+                <nav class="float-right">
+                    <ul>
+                        <li><a class="links" href="./signin-form.html">Signin</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
         <div class="container">
             <div class="form-style">
-                <h2>signup form</h2>
-                <form action="">
+                <h2>Sign Up Form</h2>
+                <form>
                     <div class="form-group">
-                        <input type="text" name="" id="name" placeholder="Name" required>
+                        <label for="name">Name</label>
+                        <div class="btn float-left overflow">
+                            <input type="text" name="" id="name" placeholder="First Name">
+                        </div>
+                        <div class="col-50 float-right overflow">
+                            <input type="text" name="" placeholder="Last Name">
+                        </div>
+                    </div><br>
+                    <div class="form-group">
+                        <label class="pt-10" for="email">Email</label>
+                        <input type="email" name="" id="email">
                     </div>
                     <div class="form-group">
-                        <input type="password" name="" id="password" placeholder="Password" required>
+                        <label for="password">Password</label>
+                        <input type="password" name="" id="password">
                     </div>
+                    <input type="checkbox" name="forget-password" id="forget-password">
+                    <label class="inline" for="forget-password">Forget Password</label>
                     <div class="form-group">
-                        <input type="email" name="" id="email" placeholder="Email" required>
+                        <button class="btn-submit">submit</button>
                     </div>
-                    <div class="form-group">
-                        <input type="phone" name="" id="phone" placeholder="Phone" required>
+                    <div class="text-center">
+                        <p>Or</p>
                     </div>
-                    <div class="form-group">
-                        <a href="./dashboard.html">submit</a>
+                    <div class="overflow mt-10">
+                        <div class="btn float-left">
+                            <a><img src="./img/facebook-login.png" alt="Login with facebook"></a>
+                        </div>
+                        <div class="btn float-right ">
+                            <img src="./img/google-login.png" alt="Login with google">
+                        </div>
                     </div>
                 </form>
             </div>
