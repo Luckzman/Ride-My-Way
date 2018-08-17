@@ -32,7 +32,8 @@ router.post('/users/rides', authChecker, rideController2.createRide);
 
 
 
-router.post('/rides/:id/request', authChecker, rideController2.createRideRequest);
+router.post('/rides/:id/requests', authChecker, rideController2.createRideRequest);
+router.get('/users/rides/:id/requests', authChecker, rideController2.getRideRequest);
 
 
 export default router;

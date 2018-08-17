@@ -48,7 +48,6 @@ const Rides = {
     },
     createRideRequest(req, res, next) {
         const query = 'SELECT * FROM rides WHERE id = $1';
-        //const query = 'SELECT rides.*, riderequest.* FROM rides JOIN riderequest ON (rides.id = riderequest.ride_id)';
         const value = [req.params.id];
         db.query(query, value).then((ride)=>{
            console.log(req.userData)
@@ -82,6 +81,27 @@ const Rides = {
             return res.status(404).json({
                 success: false,
                 error,
+            })
+        })
+    },
+    getRideRequest(req,res){
+        const query = 'SELECT users.*, rides.*, riderequest.* FROM rideRequest JOIN users ON (rideRequest.user_id = users.id) JOIN rides ON (rideRequest.ride_id = rides.id) WHERE ride.id = $1';
+        const values = [parseInt(req.params.id,10)];
+        db.query(query, values).then((request)=>{
+            if(request.rowCount<1){
+                return res.status(404).json({
+                    success: false,
+                    message: 'Request not found'
+                })
+            }
+            return res.status(200).json({
+                success: true,
+                data: request.rows
+            })
+        }).catch((error)=>{
+            return res.status(500).json({
+                success: false,
+                error
             })
         })
     }
